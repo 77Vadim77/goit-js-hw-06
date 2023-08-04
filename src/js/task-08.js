@@ -1,4 +1,4 @@
-const formEl = document('.form-login-form');
+const formEl = document('.form.login-form');
 formEl.addEventListener('sumbit', onFormSumbit);
 
 function onFormSumbit(event) {
@@ -17,7 +17,8 @@ function onFormSumbit(event) {
     console.log(data)
 
     if (email === '' || password === '') {
-        alert('Всі поля повинні бути заповнені!');
+        return alert('Всі поля повинні бути заповнені!');
     };
-    
+
 };
+
