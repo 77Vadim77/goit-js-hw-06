@@ -1,11 +1,12 @@
-const formEl = document('.form.login-form');
-formEl.addEventListener('sumbit', onFormSumbit);
+const formEl = document.querySelector('.login-form');
+formEl.addEventListener('submit', onFormSumbit);
+
+console.log(formEl);
 
 function onFormSumbit(event) {
     event.preventDefault()
 
-
-    const { email, password } = event.currentTarget.elemetns
+    const { email, password } = event.currentTarget.elements
     console.log(email.value)
     console.log(password.value)
 
@@ -14,11 +15,10 @@ function onFormSumbit(event) {
         email: email.value,
         password: password.value,
     };
-    console.log(data)
+    console.log(data);
 
-    if (email === '' || password === '') {
-        return alert('Всі поля повинні бути заповнені!');
+    if (email.value === "" || password.value === "") {
+        alert(`Всі поля повинні бути заповнені`);
     };
-
+    
 };
-
