@@ -5,7 +5,6 @@ console.log(formEl);
 
 function onFormSumbit(event) {
     event.preventDefault() 
-    
     const { email, password } = event.currentTarget.elements
     console.log(email.value)
     console.log(password.value)
