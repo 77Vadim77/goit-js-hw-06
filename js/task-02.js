@@ -12,14 +12,11 @@ const ingredients = [
   
   const createdList = ingredients.map(item => {
     const liEl = document.createElement("li");
-  li.textContent = item;
-  li.classList.add("item");
-    
-  cosnole.log(liEl);  
-    return ingredients; 
-  
+  liEl.textContent = item;
+  liEl.classList.add("item");  
+    return liEl;
   });
 
-  ulEl.append(...createdEL)
+  ulEl.append(...createdList)
 
 
