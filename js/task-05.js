@@ -1,11 +1,12 @@
-const inputname = document.querySelector('#name-input')
-const span = document.querySelector('#name-output')
+const inputName = document.getElementById("name-input")
+const greet = document.getElementById("name-output")
+let anonymous = "Anonymous";
+
+greet.textContent = anonymous;
 
 inputName.addEventListener('input', inputTextHandler);
 
-function inputTextHandler() {
-    if (inputName.value !== " ") {
-    return span.innerHTMl = inputName.value
-  }    
+function inputTextHandler(event) {
+  greet.textContent = event.target.value || anonymous;
 };
 
